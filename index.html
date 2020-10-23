@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/pig-game/css/style.css" class="rel">
+    <title>Pig Game</title>
+  </head>
+  <body>
+    <main>
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Player 1</h2>
+        <p class="score" id="score--0">43</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Player 2</h2>
+        <p class="score" id="score--1">24</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
+
+      <img src="/pig-game/img/dice-5.png" alt="Playing dice" class="dice">
+      <button class="btn btn--instructions" id="show-modal">❓ How to Play</button>
+      <button class="btn btn--new">🔁 New Game</button>
+      <button class="btn btn--roll">🎲 Roll Dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
+
+    </main>
+
+
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1>🐷 The Pig Game 🐷</h1>
+      <h3>
+        A player will roll the die. As long as a player does not roll a 1, the die value will be added to the current score. If a player rolls a 1, current score is not added to main score and ends the player's turn. A player can optionally hold after the initial roll if the player wants to add the current score to the main score. The player with the highest score wins!
+      </h3>
+    </div>
+    
+    <div class="overlay hidden"></div>
+
+    <script src="/pig-game/src/main.js"></script>
+  </body>
+</html>
